@@ -1,0 +1,56 @@
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost
+220.243.239.25  push-ws.live.dlfyb.com
+220.243.239.25  hls-ws1.live.dlfyb.com
+220.243.239.25  hdl-ws1.live.dlfyb.com
+
+220.243.239.25  push-ws.live.yzmfy.com
+220.243.239.25  hls-ws.live.yzmfy.com
+220.243.239.25  hdl-ws.live.yzmfy.com
+
+163.171.194.121 push-ws.live.jcgsdl.com
+220.243.239.25  hls-ws.live.jcgsdl.com
+220.243.239.25  hdl-ws.live.jcgsdl.com
+
+157.185.187.60  push-ws.live.jxcctjg.com
+157.185.187.60  hls-ws.live.jxcctjg.com
+157.185.187.60  hdl-ws.live.jxcctjg.com
+
+222.127.12.141  push-ws.live.sxtat.cn
+222.127.12.141  hls-ws.live.sxtat.cn
+222.127.12.141  hdl-ws.live.sxtat.cn
+
+222.127.12.141  push-ws.live.syzhjx.cn
+222.127.12.141  hls-ws.live.syzhjx.cn
+222.127.12.141  hdl-ws.live.syzhjx.cn
+
+163.171.198.78  push-ws.live.mankosupply.com
+157.185.185.184 hls-ws.live.mankosupply.com
+157.185.185.184 hdl-ws.live.mankosupply.com
+
+220.243.239.25  push-ws.live.meiliky.com
+220.243.239.25  hls-ws.live.meiliky.com
+220.243.239.25  hdl-ws.live.meiliky.com
