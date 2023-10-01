@@ -1,5 +1,5 @@
 @echo off
-TITLE Modifying your HOSTS file
+TITLE HOSTS DOSYAN DEGISIYOR
 COLOR F0
 ECHO.
 
@@ -10,7 +10,7 @@ REM  --> Check for permissions
 
 REM --> If error flag set, we do not have admin.
 if '%errorlevel%' NEQ '0' (
-    echo Requesting administrative privileges...
+    echo Y├Ânetici hakları isteniyor...
     goto UACPrompt
 ) else ( goto gotAdmin )
 
@@ -30,32 +30,32 @@ if '%errorlevel%' NEQ '0' (
 
 :LOOP
 SET Choice=
-SET /P Choice="Do you want to modify HOSTS file ? (Y/N)"
+SET /P Choice="Hosts dosyanı değiştirmek istiyor musun ? (E/H)"
 
 IF NOT '%Choice%'=='' SET Choice=%Choice:~0,1%
 
 ECHO.
-IF /I '%Choice%'=='Y' GOTO ACCEPTED
-IF /I '%Choice%'=='N' GOTO REJECTED
-ECHO Please type Y (for Yes) or N (for No) to proceed!
+IF /I '%Choice%'=='E' GOTO ACCEPTED
+IF /I '%Choice%'=='H' GOTO REJECTED
+ECHO Evet için E  tuşuna Hayır için H tuşuna basınız!
 ECHO.
 GOTO Loop
 
 :REJECTED
-ECHO Your HOSTS file was left unchanged>>%systemroot%\Temp\hostFileUpdate.log
-ECHO Finished.
+ECHO HOSTS dosyanızda değişiklik yapılmamıştır.>>%systemroot%\Temp\hostFileUpdate.log
+ECHO İşlem sonu.
 GOTO END
 
 :ACCEPTED
 if exist "hosts_target" (
 move "C:\Windows\System32\drivers\etc\hosts" "C:\Windows\System32\drivers\etc\hosts-Original"
-move "hosts_target" "C:\Windows\System32\drivers\etc\hosts"
-ECHO Renaming current hosts file to hosts-Original
-ECHO Activating Hosts file to target hosts
-ECHO NEW HOSTS FILE IS ACTIVE
+copy "hosts_target" "C:\Windows\System32\drivers\etc\hosts"
+ECHO Host dosyasının ismi değişiştiriliyor
+ECHO Eski hosts dosyası kaldırıldı
+ECHO Yeni hosts dosyan aktif.
 
 ) else (
-    ECHO new Hosts file already in place
+    ECHO yeni Hosts dosyanı zaten değişişmiz.
 )
 
 GOTO END
